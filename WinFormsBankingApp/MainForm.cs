@@ -1,5 +1,6 @@
 ﻿public partial class MainForm : Form
 {
+    private const string Filename = "bank_background.jpg";
     private static Bank bank = new Bank();
 
     private Button btnCreateAccount;
@@ -8,6 +9,22 @@
 
     public MainForm()
     {
+        Text = "EMJAY MICROFINANCE BANK";
+        StartPosition = FormStartPosition.CenterScreen;
+        Size = new Size(600, 400);
+        BackColor = Color.FromArgb(245, 245, 220); // Beige/Light Background
+        Font = new Font("Tahoma", 10F, FontStyle.Regular);
+
+        var titleLabel = new Label
+        {
+            Text = " WELCOME TO EMJAY MICROFINANCE BANK \n  *Secure and Reliable Banking Solutions* ",  // Modified welcome message for a more engaging and descriptive tone
+            Font = new Font("Tahoma", 16F, FontStyle.Bold),
+            ForeColor = Color.OrangeRed,
+            AutoSize = true,
+            Location = new Point((ClientSize.Width - 400) / 2, 20)  // Adjusted width to 600 to center better based on text length
+        };
+        Controls.Add(titleLabel);  // Added this line to ensure the label is added to the form's controls
+
         InitializeComponent();
     }
 
@@ -18,27 +35,50 @@
         this.btnExit = new System.Windows.Forms.Button();
         this.SuspendLayout();
 
-        this.btnCreateAccount.Location = new System.Drawing.Point(50, 50);
+        // Form Style
+        this.BackColor = Color.FromArgb(245, 245, 220); // Beige/Light Background
+        this.Font = new Font("Tahoma", 10F, FontStyle.Regular);
+
+        this.btnCreateAccount.Location = new System.Drawing.Point(50, 80);  // Adjusted Y position to make room for the longer title
         this.btnCreateAccount.Size = new System.Drawing.Size(180, 40);
         this.btnCreateAccount.Text = "Create New Account";
+        this.btnCreateAccount.BackColor = Color.Orange; // Orange Button
+        this.btnCreateAccount.ForeColor = Color.White;
+        this.btnCreateAccount.FlatStyle = FlatStyle.Flat;
+        this.btnCreateAccount.FlatAppearance.BorderSize = 0;
+        this.btnCreateAccount.Font = new Font("Tahoma", 11F, FontStyle.Bold);
         this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
         this.Controls.Add(this.btnCreateAccount);
 
-        this.btnLogin.Location = new System.Drawing.Point(50, 100);
+        this.btnLogin.Location = new System.Drawing.Point(50, 130);  // Adjusted Y position
         this.btnLogin.Size = new System.Drawing.Size(180, 40);
         this.btnLogin.Text = "Login to Existing Account";
+        this.btnLogin.BackColor = Color.Gold; // Gold Button
+        this.btnLogin.ForeColor = Color.Black;
+        this.btnLogin.FlatStyle = FlatStyle.Flat;
+        this.btnLogin.FlatAppearance.BorderSize = 0;
+        this.btnLogin.Font = new Font("Tahoma", 11F, FontStyle.Bold);
         this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
         this.Controls.Add(this.btnLogin);
 
-        this.btnExit.Location = new System.Drawing.Point(50, 150);
+        this.btnExit.Location = new System.Drawing.Point(50, 180);  // Adjusted Y position
         this.btnExit.Size = new System.Drawing.Size(180, 40);
         this.btnExit.Text = "Exit Application";
+        this.btnExit.BackColor = Color.DarkGray; // Neutral Color
+        this.btnExit.ForeColor = Color.White;
+        this.btnExit.FlatStyle = FlatStyle.Flat;
+        this.btnExit.FlatAppearance.BorderSize = 0;
+        this.btnExit.Font = new Font("Tahoma", 10F, FontStyle.Regular);
         this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
         this.Controls.Add(this.btnExit);
 
-        this.ClientSize = new System.Drawing.Size(280, 240);
+        this.ClientSize = new System.Drawing.Size(600, 400);
         this.Text = "Emjay Bank - Main Menu";
         this.StartPosition = FormStartPosition.CenterScreen;
+
+        BackgroundImage = Image.FromFile("C:\\Users\\HP\\Desktop\\bank3.jpg"); // Ensure this image exists in the executable directory
+        this.BackgroundImageLayout = ImageLayout.Stretch;
+
         this.ResumeLayout(false);
     }
 

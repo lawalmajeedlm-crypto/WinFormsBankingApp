@@ -21,13 +21,16 @@ public partial class AccountForm : Form
     private Button btnTransfer; // New Transfer Button
     private Button btnLogout;
     private Button btnShutdown;
+    private TextBox txtFullName;
+    private TextBox txtUserName;
+    private TextBox txtPin;
 
     public AccountForm(BankAccount account, Bank bank)
     {
         this.account = account;
         this.bank = bank; // Initialize Bank reference
         InitializeComponent();
-        lblWelcome.Text = $"Welcome, {account.UserName}.";
+        lblWelcome.Text = $"Welcome, {account.FullName}.";
         UpdateBalances();
     }
 
@@ -49,13 +52,52 @@ public partial class AccountForm : Form
         this.btnTransfer = new System.Windows.Forms.Button(); // New
         this.btnLogout = new System.Windows.Forms.Button();
         this.btnShutdown = new System.Windows.Forms.Button();
+        this.txtFullName = new System.Windows.Forms.TextBox();
+        this.txtUserName = new System.Windows.Forms.TextBox();
+        this.txtPin = new System.Windows.Forms.TextBox();
         this.SuspendLayout();
 
-        // Row 1: Welcome
+
+        // Form Style
+        this.BackColor = Color.White;
+        this.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+
+        // Welcome Label
         this.lblWelcome.Location = new System.Drawing.Point(10, 10);
         this.lblWelcome.AutoSize = true;
-        this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 12F, FontStyle.Bold);
+        this.lblWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+        this.lblWelcome.ForeColor = Color.OrangeRed; // Highlight Welcome Message
         this.Controls.Add(this.lblWelcome);
+
+        // Styling Helpers
+        Action<Label> styleTitleLabel = (l) => {
+            l.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            l.ForeColor = Color.Orange; // Orange for Titles
+        };
+
+        Action<Label> styleBalanceLabel = (l) => {
+            l.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
+            l.ForeColor = Color.DarkGoldenrod; // Dark Gold for Balances
+        };
+
+        static void styleActionButton(Button b, object isPrimary)
+        {
+            b.Size = new System.Drawing.Size(100, 30);
+            b.FlatStyle = FlatStyle.Flat;
+            b.FlatAppearance.BorderSize = 0;
+            b.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            if ((bool)isPrimary)
+            {
+                b.BackColor = Color.Gold;
+                b.ForeColor = Color.Black;
+            }
+            else
+            {
+                b.BackColor = Color.LightGray;
+                b.ForeColor = Color.Black;
+            }
+        }
+
 
         // Row 2: Savings Section
         this.lblSavingsTitle.Location = new System.Drawing.Point(10, 50);
@@ -125,9 +167,14 @@ public partial class AccountForm : Form
         this.txtAmount.Size = new System.Drawing.Size(100, 20);
         this.Controls.Add(this.txtAmount);
 
-        this.btnTransfer.Location = new System.Drawing.Point(230, 205); // Position Transfer button
+        this.btnTransfer.Location = new System.Drawing.Point(230, 205);
         this.btnTransfer.Size = new System.Drawing.Size(100, 30);
         this.btnTransfer.Text = "Transfer";
+        this.btnTransfer.BackColor = Color.Orange; // Primary Orange
+        this.btnTransfer.ForeColor = Color.White;
+        this.btnTransfer.FlatStyle = FlatStyle.Flat;
+        this.btnTransfer.FlatAppearance.BorderSize = 0;
+        this.btnTransfer.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
         this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
         this.Controls.Add(this.btnTransfer);
 
@@ -135,12 +182,20 @@ public partial class AccountForm : Form
         this.btnLogout.Location = new System.Drawing.Point(10, 250);
         this.btnLogout.Size = new System.Drawing.Size(150, 30);
         this.btnLogout.Text = "Logout";
+        this.btnLogout.BackColor = Color.Gray;
+        this.btnLogout.ForeColor = Color.White;
+        this.btnLogout.FlatStyle = FlatStyle.Flat;
+        this.btnLogout.FlatAppearance.BorderSize = 0;
         this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
         this.Controls.Add(this.btnLogout);
 
         this.btnShutdown.Location = new System.Drawing.Point(180, 250);
         this.btnShutdown.Size = new System.Drawing.Size(150, 30);
         this.btnShutdown.Text = "Shutdown All";
+        this.btnShutdown.BackColor = Color.Black;
+        this.btnShutdown.ForeColor = Color.White;
+        this.btnShutdown.FlatStyle = FlatStyle.Flat;
+        this.btnShutdown.FlatAppearance.BorderSize = 0;
         this.btnShutdown.Click += new System.EventHandler(this.btnShutdown_Click);
         this.Controls.Add(this.btnShutdown);
 
@@ -155,6 +210,49 @@ public partial class AccountForm : Form
     {
         lblSavingsBalance.Text = $"{account.GetSavingsBalance():C2}";
         lblCurrentBalance.Text = $"{account.GetCurrentBalance():C2}";
+    }
+
+    // In CreateAccountForm Class
+
+    private void btnCreate_Click(object sender, EventArgs e)
+    {
+        string fullName = txtFullName.Text.Trim();
+        string userName = txtUserName.Text.Trim();
+        string pin = txtPin.Text;
+
+        if (string.IsNullOrWhiteSpace(fullName))
+        {
+            MessageBox.Show("Full Name cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        // --- Custom Validation for Full Name (Non-numeric "TryParse" Concept) ---
+        // Check if the full name contains ONLY letters and spaces.
+        bool isValidName = fullName.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+
+        if (!isValidName)
+        {
+            MessageBox.Show("Full Name must contain only letters and spaces.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+        // -----------------------------------------------------------------------
+
+        if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(pin))
+        {
+            MessageBox.Show("Username and PIN cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        try
+        {
+            // Assuming you have updated Bank.CreateAccount to accept fullName
+            // bank.CreateAccount(userName, pin, fullName);
+            this.Close();
+        }
+        catch (ArgumentException ex)
+        {
+            MessageBox.Show($"Creation Error: {ex.Message}\nPlease try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
     }
 
     // --- NEW Transfer Button Handler ---

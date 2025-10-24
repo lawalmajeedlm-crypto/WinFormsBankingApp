@@ -27,7 +27,18 @@
         this.btnCreate = new System.Windows.Forms.Button();
         this.SuspendLayout();
 
-        this.lblFullName.Location = new System.Drawing.Point(10, 15);
+        // Form Style
+        this.BackColor = Color.White;
+        this.Font = new Font("Tahoma", 9F, FontStyle.Regular);
+
+        // Labels Style (Gold Color)
+        Action<Label> styleLabel = (l) =>
+        {
+            l.ForeColor = Color.Gold;
+            l.Font = new Font("Tahoma", 10F, FontStyle.Bold);
+        };
+
+            this.lblFullName.Location = new System.Drawing.Point(10, 15);
         this.lblFullName.Text = "Full Name:";
         this.lblFullName.Size = new System.Drawing.Size(80, 20);
         this.Controls.Add(this.lblFullName);
@@ -62,7 +73,7 @@
         this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
         this.Controls.Add(this.btnCreate);
 
-        this.ClientSize = new System.Drawing.Size(300, 160);
+        this.ClientSize = new System.Drawing.Size(400, 280);
         this.Text = "Create New Account";
         this.StartPosition = FormStartPosition.CenterParent;
         this.ResumeLayout(false);
@@ -71,18 +82,26 @@
 
     private void btnCreate_Click(object sender, EventArgs e)
     {
+        string fullName = txtFullName.Text.Trim();
         string userName = txtUserName.Text.Trim();
         string pin = txtPin.Text;
 
-        if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(pin))
+        if (string.IsNullOrWhiteSpace(fullName) || string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(pin))
         {
-            MessageBox.Show("Username and PIN cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("Full Name, Username, and PIN cannot be empty.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return;
+        }
+
+        bool isValidName = fullName.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
+        if (!isValidName)
+        {
+            MessageBox.Show("Full Name can only contain letters and spaces.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
 
         try
         {
-            bank.CreateAccount(userName, pin);
+            bank.CreateAccount(userName, pin, fullName);
             this.Close();
         }
         catch (ArgumentException ex)

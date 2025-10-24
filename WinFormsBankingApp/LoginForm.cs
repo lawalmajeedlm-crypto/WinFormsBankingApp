@@ -27,6 +27,17 @@
         this.btnLogin = new System.Windows.Forms.Button();
         this.SuspendLayout();
 
+
+        // Form Style
+        this.BackColor = Color.White;
+        this.Font = new Font("Tahoma", 9F, FontStyle.Regular);
+
+        // Labels Style (Gold Color)
+        Action<Label> styleLabel = (l) => {
+            l.ForeColor = Color.Gold;
+            l.Font = new Font("Tahoma", 10F, FontStyle.Bold);
+        };
+
         this.lblAccountNumber.Location = new System.Drawing.Point(10, 15);
         this.lblAccountNumber.Text = "Account #:";
         this.lblAccountNumber.Size = new System.Drawing.Size(80, 20);
@@ -56,13 +67,18 @@
         this.txtPin.UseSystemPasswordChar = true;
         this.Controls.Add(this.txtPin);
 
+        // Button Style (Orange Color)
         this.btnLogin.Location = new System.Drawing.Point(100, 110);
         this.btnLogin.Size = new System.Drawing.Size(100, 30);
         this.btnLogin.Text = "Login";
+        this.btnLogin.BackColor = Color.Orange;
+        this.btnLogin.ForeColor = Color.White;
+        this.btnLogin.FlatStyle = FlatStyle.Flat;
+        this.btnLogin.FlatAppearance.BorderSize = 0;
         this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
         this.Controls.Add(this.btnLogin);
 
-        this.ClientSize = new System.Drawing.Size(300, 160);
+        this.ClientSize = new System.Drawing.Size(400, 280);
         this.Text = "Account Login";
         this.StartPosition = FormStartPosition.CenterParent;
         this.ResumeLayout(false);
