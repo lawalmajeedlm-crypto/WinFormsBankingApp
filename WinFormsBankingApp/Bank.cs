@@ -4,9 +4,9 @@ public class Bank
 {
     private List<BankAccount> accounts = new List<BankAccount>();
 
-    public void CreateAccount(string userName, string pin)
+    public void CreateAccount(string userName, string pin, string fullName)
     {
-        var newAccount = new BankAccount(userName, pin);
+        var newAccount = new BankAccount(userName, pin, fullName);
         accounts.Add(newAccount);
         MessageBox.Show($"Account Created Successfully.\nAccount Number: {newAccount.AccountNumber}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
     }

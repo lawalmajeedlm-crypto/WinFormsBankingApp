@@ -38,14 +38,26 @@ public partial class TransferForm : Form
         this.btnExecuteTransfer = new System.Windows.Forms.Button();
         this.SuspendLayout();
 
+        // Form Style
+        this.BackColor = Color.White;
+        this.Font = new Font("Tahoma", 9F, FontStyle.Regular);
+
+        // Styling Helpers
+        Action<Label> styleLabel = (l) => {
+            l.ForeColor = Color.Orange;
+            l.Font = new Font("Tahoma", 9F, FontStyle.Bold);
+        };
+
         this.lblAmount.Location = new System.Drawing.Point(10, 10);
         this.lblAmount.AutoSize = true;
-        this.lblAmount.Font = new System.Drawing.Font("Segoe UI", 10F, FontStyle.Bold);
+        this.lblAmount.Font = new Font("Tahoma", 10F, FontStyle.Bold);
+        this.lblAmount.ForeColor = Color.DarkGoldenrod;
         this.Controls.Add(this.lblAmount);
 
         this.lblSource.Location = new System.Drawing.Point(10, 40);
         this.lblSource.Text = "From Account:";
         this.lblSource.AutoSize = true;
+        styleLabel(this.lblSource);
         this.Controls.Add(this.lblSource);
 
         this.cmbSourceAccount.Location = new System.Drawing.Point(120, 37);
@@ -56,6 +68,7 @@ public partial class TransferForm : Form
         this.lblRecipient.Location = new System.Drawing.Point(10, 70);
         this.lblRecipient.Text = "To Account #:";
         this.lblRecipient.AutoSize = true;
+        styleLabel(this.lblRecipient);
         this.Controls.Add(this.lblRecipient);
 
         this.txtRecipientAccount.Location = new System.Drawing.Point(120, 67);
@@ -65,10 +78,15 @@ public partial class TransferForm : Form
         this.btnExecuteTransfer.Location = new System.Drawing.Point(100, 110);
         this.btnExecuteTransfer.Size = new System.Drawing.Size(120, 30);
         this.btnExecuteTransfer.Text = "Execute Transfer";
+        this.btnExecuteTransfer.BackColor = Color.Orange; // Primary Action Orange
+        this.btnExecuteTransfer.ForeColor = Color.White;
+        this.btnExecuteTransfer.FlatStyle = FlatStyle.Flat;
+        this.btnExecuteTransfer.FlatAppearance.BorderSize = 0;
+        this.btnExecuteTransfer.Font = new Font("Tahoma", 9F, FontStyle.Bold);
         this.btnExecuteTransfer.Click += new System.EventHandler(this.btnExecuteTransfer_Click);
         this.Controls.Add(this.btnExecuteTransfer);
 
-        this.ClientSize = new System.Drawing.Size(290, 160);
+        this.ClientSize = new System.Drawing.Size(400, 280);
         this.Text = "Execute Transfer";
         this.StartPosition = FormStartPosition.CenterParent;
         this.ResumeLayout(false);

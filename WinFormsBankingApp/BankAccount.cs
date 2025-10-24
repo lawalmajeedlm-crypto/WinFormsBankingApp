@@ -1,4 +1,4 @@
-﻿using System;
+﻿using  System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -12,17 +12,19 @@ namespace EmjayBankApp
     {
         public string AccountNumber { get; private set; }
         public string UserName { get; private set; }
+        public string FullName { get; private set; }    
         private char[] Pin;
         public decimal SavingsBalance { get; private set; }
         public decimal CurrentBalance { get; private set; }
 
-        public BankAccount(string userName, string pin)
+        public BankAccount(string userName, string pin, string fullName)
         {
             if (!IsValidPin(pin))
             {
                 throw new ArgumentException("PIN must be exactly 4 digits.");
             }
             this.UserName = userName;
+            this.FullName = fullName;
             this.Pin = pin.ToCharArray();
             this.SavingsBalance = 0.00m;
             this.CurrentBalance = 0.00m;

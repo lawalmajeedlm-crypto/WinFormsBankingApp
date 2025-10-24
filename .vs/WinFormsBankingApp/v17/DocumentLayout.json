@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\accountform.transferform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\accountform.transferform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\createaccountform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,24 +15,28 @@
       "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\accountform.transferform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\accountform.transferform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\accountform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\accountform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\bankaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|c:\\users\\hp\\source\\repos\\winformsbankingapp\\winformsbankingapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|solutionrelative:winformsbankingapp\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1854F8E3-F8E5-409B-89DC-0D0129647AD3}|WinFormsBankingApp\\WinFormsBankingApp.csproj|C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\winformsbankingapp\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -46,8 +50,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": 22,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Bank.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Bank.cs",
+              "RelativeDocumentMoniker": "WinFormsBankingApp\\Bank.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Bank.cs",
+              "RelativeToolTip": "WinFormsBankingApp\\Bank.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T09:55:32.491Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -106,13 +124,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "WinFormsBankingApp\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Form1.Designer.cs",
+              "RelativeToolTip": "WinFormsBankingApp\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-24T10:09:03.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AccountForm.TransferForm.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\AccountForm.TransferForm.cs",
               "RelativeDocumentMoniker": "WinFormsBankingApp\\AccountForm.TransferForm.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\AccountForm.TransferForm.cs",
               "RelativeToolTip": "WinFormsBankingApp\\AccountForm.TransferForm.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAYwGkAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T12:54:00.261Z",
               "EditorCaption": ""
@@ -125,7 +156,7 @@
               "RelativeDocumentMoniker": "WinFormsBankingApp\\CreateAccountForm.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\CreateAccountForm.cs",
               "RelativeToolTip": "WinFormsBankingApp\\CreateAccountForm.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAswGkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T10:06:09.94Z",
               "EditorCaption": ""
@@ -138,23 +169,22 @@
               "RelativeDocumentMoniker": "WinFormsBankingApp\\MainForm.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\MainForm.cs",
               "RelativeToolTip": "WinFormsBankingApp\\MainForm.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAYwEIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAD4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T10:04:28.891Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\LoginForm.cs",
               "RelativeDocumentMoniker": "WinFormsBankingApp\\LoginForm.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\LoginForm.cs",
               "RelativeToolTip": "WinFormsBankingApp\\LoginForm.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAYwFsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:02:35.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:02:35.927Z"
             },
             {
               "$type": "Document",
@@ -164,7 +194,7 @@
               "RelativeDocumentMoniker": "WinFormsBankingApp\\AccountForm.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\AccountForm.cs",
               "RelativeToolTip": "WinFormsBankingApp\\AccountForm.cs",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAYwBMBAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T09:59:42.571Z",
               "EditorCaption": ""
@@ -172,32 +202,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Bank.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Bank.cs",
-              "RelativeDocumentMoniker": "WinFormsBankingApp\\Bank.cs",
-              "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Bank.cs",
-              "RelativeToolTip": "WinFormsBankingApp\\Bank.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T09:55:32.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "BankAccount.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\BankAccount.cs",
               "RelativeDocumentMoniker": "WinFormsBankingApp\\BankAccount.cs",
               "ToolTip": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\BankAccount.cs",
               "RelativeToolTip": "WinFormsBankingApp\\BankAccount.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAA1wJkAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAQwHEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-23T09:53:27.598Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Program.cs",
               "RelativeDocumentMoniker": "WinFormsBankingApp\\Program.cs",
@@ -210,7 +227,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\HP\\source\\repos\\WinFormsBankingApp\\WinFormsBankingApp\\Form1.cs",
               "RelativeDocumentMoniker": "WinFormsBankingApp\\Form1.cs",
