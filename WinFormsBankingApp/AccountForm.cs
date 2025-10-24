@@ -3,7 +3,7 @@
 public partial class AccountForm : Form
 {
     private BankAccount account;
-    private Bank bank; // Added reference to Bank to find recipient accounts
+    private Bank bank; 
 
     private Label lblWelcome;
     private Label lblSavingsTitle;
@@ -18,7 +18,7 @@ public partial class AccountForm : Form
     private Button btnWithdrawCurrent;
     private Label lblAmount;
     private TextBox txtAmount;
-    private Button btnTransfer; // New Transfer Button
+    private Button btnTransfer; 
     private Button btnLogout;
     private Button btnShutdown;
     private TextBox txtFullName;
@@ -28,7 +28,7 @@ public partial class AccountForm : Form
     public AccountForm(BankAccount account, Bank bank)
     {
         this.account = account;
-        this.bank = bank; // Initialize Bank reference
+        this.bank = bank; 
         InitializeComponent();
         lblWelcome.Text = $"Welcome, {account.FullName}.";
         UpdateBalances();
@@ -49,7 +49,7 @@ public partial class AccountForm : Form
         this.btnWithdrawCurrent = new System.Windows.Forms.Button();
         this.lblAmount = new System.Windows.Forms.Label();
         this.txtAmount = new System.Windows.Forms.TextBox();
-        this.btnTransfer = new System.Windows.Forms.Button(); // New
+        this.btnTransfer = new System.Windows.Forms.Button(); 
         this.btnLogout = new System.Windows.Forms.Button();
         this.btnShutdown = new System.Windows.Forms.Button();
         this.txtFullName = new System.Windows.Forms.TextBox();
@@ -57,27 +57,24 @@ public partial class AccountForm : Form
         this.txtPin = new System.Windows.Forms.TextBox();
         this.SuspendLayout();
 
-
-        // Form Style
         this.BackColor = Color.White;
         this.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
 
-        // Welcome Label
+        
         this.lblWelcome.Location = new System.Drawing.Point(10, 10);
         this.lblWelcome.AutoSize = true;
         this.lblWelcome.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-        this.lblWelcome.ForeColor = Color.OrangeRed; // Highlight Welcome Message
+        this.lblWelcome.ForeColor = Color.OrangeRed; 
         this.Controls.Add(this.lblWelcome);
 
-        // Styling Helpers
         Action<Label> styleTitleLabel = (l) => {
             l.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            l.ForeColor = Color.Orange; // Orange for Titles
+            l.ForeColor = Color.Orange; 
         };
 
         Action<Label> styleBalanceLabel = (l) => {
             l.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
-            l.ForeColor = Color.DarkGoldenrod; // Dark Gold for Balances
+            l.ForeColor = Color.DarkGoldenrod; 
         };
 
         static void styleActionButton(Button b, object isPrimary)
@@ -98,8 +95,6 @@ public partial class AccountForm : Form
             }
         }
 
-
-        // Row 2: Savings Section
         this.lblSavingsTitle.Location = new System.Drawing.Point(10, 50);
         this.lblSavingsTitle.Text = "Savings Account:";
         this.lblSavingsTitle.AutoSize = true;
@@ -109,7 +104,6 @@ public partial class AccountForm : Form
         this.lblSavingsBalance.AutoSize = true;
         this.Controls.Add(this.lblSavingsBalance);
 
-        // Row 3: Savings Buttons
         this.btnCheckSavings.Location = new System.Drawing.Point(10, 80);
         this.btnCheckSavings.Size = new System.Drawing.Size(100, 30);
         this.btnCheckSavings.Text = "Check S. Bal";
@@ -128,7 +122,6 @@ public partial class AccountForm : Form
         this.btnWithdrawSavings.Click += new System.EventHandler(this.btnWithdrawSavings_Click);
         this.Controls.Add(this.btnWithdrawSavings);
 
-        // Row 4: Current Section
         this.lblCurrentTitle.Location = new System.Drawing.Point(10, 130);
         this.lblCurrentTitle.Text = "Current Account:";
         this.lblCurrentTitle.AutoSize = true;
@@ -138,7 +131,6 @@ public partial class AccountForm : Form
         this.lblCurrentBalance.AutoSize = true;
         this.Controls.Add(this.lblCurrentBalance);
 
-        // Row 5: Current Buttons
         this.btnCheckCurrent.Location = new System.Drawing.Point(10, 160);
         this.btnCheckCurrent.Size = new System.Drawing.Size(100, 30);
         this.btnCheckCurrent.Text = "Check C. Bal";
@@ -157,7 +149,6 @@ public partial class AccountForm : Form
         this.btnWithdrawCurrent.Click += new System.EventHandler(this.btnWithdrawCurrent_Click);
         this.Controls.Add(this.btnWithdrawCurrent);
 
-        // Row 6: Amount Input & Transfer
         this.lblAmount.Location = new System.Drawing.Point(10, 210);
         this.lblAmount.Text = "Amount ($):";
         this.lblAmount.AutoSize = true;
@@ -170,7 +161,7 @@ public partial class AccountForm : Form
         this.btnTransfer.Location = new System.Drawing.Point(230, 205);
         this.btnTransfer.Size = new System.Drawing.Size(100, 30);
         this.btnTransfer.Text = "Transfer";
-        this.btnTransfer.BackColor = Color.Orange; // Primary Orange
+        this.btnTransfer.BackColor = Color.Orange; 
         this.btnTransfer.ForeColor = Color.White;
         this.btnTransfer.FlatStyle = FlatStyle.Flat;
         this.btnTransfer.FlatAppearance.BorderSize = 0;
@@ -178,7 +169,6 @@ public partial class AccountForm : Form
         this.btnTransfer.Click += new System.EventHandler(this.btnTransfer_Click);
         this.Controls.Add(this.btnTransfer);
 
-        // Row 7: Footer Buttons
         this.btnLogout.Location = new System.Drawing.Point(10, 250);
         this.btnLogout.Size = new System.Drawing.Size(150, 30);
         this.btnLogout.Text = "Logout";
@@ -211,9 +201,6 @@ public partial class AccountForm : Form
         lblSavingsBalance.Text = $"{account.GetSavingsBalance():C2}";
         lblCurrentBalance.Text = $"{account.GetCurrentBalance():C2}";
     }
-
-    // In CreateAccountForm Class
-
     private void btnCreate_Click(object sender, EventArgs e)
     {
         string fullName = txtFullName.Text.Trim();
@@ -226,8 +213,6 @@ public partial class AccountForm : Form
             return;
         }
 
-        // --- Custom Validation for Full Name (Non-numeric "TryParse" Concept) ---
-        // Check if the full name contains ONLY letters and spaces.
         bool isValidName = fullName.All(c => char.IsLetter(c) || char.IsWhiteSpace(c));
 
         if (!isValidName)
@@ -235,7 +220,6 @@ public partial class AccountForm : Form
             MessageBox.Show("Full Name must contain only letters and spaces.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return;
         }
-        // -----------------------------------------------------------------------
 
         if (string.IsNullOrWhiteSpace(userName) || string.IsNullOrWhiteSpace(pin))
         {
@@ -245,8 +229,6 @@ public partial class AccountForm : Form
 
         try
         {
-            // Assuming you have updated Bank.CreateAccount to accept fullName
-            // bank.CreateAccount(userName, pin, fullName);
             this.Close();
         }
         catch (ArgumentException ex)
@@ -255,7 +237,6 @@ public partial class AccountForm : Form
         }
     }
 
-    // --- NEW Transfer Button Handler ---
     private void btnTransfer_Click(object sender, EventArgs e)
     {
         if (ProcessTransactionInput(out decimal amount))
@@ -267,7 +248,6 @@ public partial class AccountForm : Form
         }
     }
 
-    // --- Transaction Handlers (Unchanged) ---
     private void btnCheckSavings_Click(object sender, EventArgs e)
     {
         MessageBox.Show($"Current Savings Balance: {account.GetSavingsBalance():C2}", "Savings Balance", MessageBoxButtons.OK, MessageBoxIcon.Information);

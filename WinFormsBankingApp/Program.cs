@@ -1,4 +1,3 @@
-// --- Program Class ---
 static class Program
 {
     [STAThread]

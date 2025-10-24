@@ -1,5 +1,4 @@
-﻿// --- NEW TransferForm Class ---
-using EmjayBankApp;
+﻿using EmjayBankApp;
 
 public partial class TransferForm : Form
 {
@@ -38,11 +37,9 @@ public partial class TransferForm : Form
         this.btnExecuteTransfer = new System.Windows.Forms.Button();
         this.SuspendLayout();
 
-        // Form Style
         this.BackColor = Color.White;
         this.Font = new Font("Tahoma", 9F, FontStyle.Regular);
 
-        // Styling Helpers
         Action<Label> styleLabel = (l) => {
             l.ForeColor = Color.Orange;
             l.Font = new Font("Tahoma", 9F, FontStyle.Bold);
@@ -78,7 +75,7 @@ public partial class TransferForm : Form
         this.btnExecuteTransfer.Location = new System.Drawing.Point(100, 110);
         this.btnExecuteTransfer.Size = new System.Drawing.Size(120, 30);
         this.btnExecuteTransfer.Text = "Execute Transfer";
-        this.btnExecuteTransfer.BackColor = Color.Orange; // Primary Action Orange
+        this.btnExecuteTransfer.BackColor = Color.Orange; 
         this.btnExecuteTransfer.ForeColor = Color.White;
         this.btnExecuteTransfer.FlatStyle = FlatStyle.Flat;
         this.btnExecuteTransfer.FlatAppearance.BorderSize = 0;
@@ -104,7 +101,6 @@ public partial class TransferForm : Form
             return;
         }
 
-        // Prevent transferring to self
         if (recipientAccountNumber == sourceAccount.AccountNumber)
         {
             MessageBox.Show("Cannot transfer to the same account.", "Transfer Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -122,7 +118,7 @@ public partial class TransferForm : Form
         try
         {
             sourceAccount.Transfer(amount, recipientAccount, sourceAccountType);
-            updateBalancesCallback?.Invoke(); // Refresh balances on the main form
+            updateBalancesCallback?.Invoke();
             MessageBox.Show($"Successfully transferred {amount:C2} from {sourceAccountType} to account {recipientAccountNumber}.", "Transfer Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }

@@ -7,7 +7,6 @@ using System.Drawing;
 
 namespace EmjayBankApp
 {
-    // --- BankAccount Class with Transfer Logic ---
     public class BankAccount
     {
         public string AccountNumber { get; private set; }
@@ -53,7 +52,6 @@ namespace EmjayBankApp
             return verified;
         }
 
-        // Finalizer to clear the stored PIN
         ~BankAccount()
         {
             if (Pin != null)
@@ -62,7 +60,6 @@ namespace EmjayBankApp
             }
         }
 
-        // --- NEW Transfer Method ---
         public void Transfer(decimal amount, BankAccount recipient, string sourceAccountType)
         {
             if (amount <= 0)
@@ -81,7 +78,7 @@ namespace EmjayBankApp
                     throw new InvalidOperationException("Insufficient funds in Savings account for transfer.");
                 }
                 SavingsBalance -= amount;
-                recipient.DepositCurrent(amount); // Deposit is always to the recipient's current for simplicity
+                recipient.DepositCurrent(amount); 
             }
             else if (sourceAccountType.Equals("Current", StringComparison.OrdinalIgnoreCase))
             {
@@ -90,7 +87,7 @@ namespace EmjayBankApp
                     throw new InvalidOperationException("Insufficient funds in Current account for transfer.");
                 }
                 CurrentBalance -= amount;
-                recipient.DepositCurrent(amount); // Deposit is always to the recipient's current for simplicity
+                recipient.DepositCurrent(amount); 
             }
             else
             {
@@ -98,7 +95,6 @@ namespace EmjayBankApp
             }
         }
 
-        // --- Transaction Methods (Unchanged) ---
         public void DepositSavings(decimal amount)
         {
             if (amount <= 0)

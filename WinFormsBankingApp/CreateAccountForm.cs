@@ -27,11 +27,9 @@
         this.btnCreate = new System.Windows.Forms.Button();
         this.SuspendLayout();
 
-        // Form Style
         this.BackColor = Color.White;
         this.Font = new Font("Tahoma", 9F, FontStyle.Regular);
 
-        // Labels Style (Gold Color)
         Action<Label> styleLabel = (l) =>
         {
             l.ForeColor = Color.Gold;

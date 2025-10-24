@@ -28,11 +28,11 @@
         this.SuspendLayout();
 
 
-        // Form Style
+       
         this.BackColor = Color.White;
         this.Font = new Font("Tahoma", 9F, FontStyle.Regular);
 
-        // Labels Style (Gold Color)
+        
         Action<Label> styleLabel = (l) => {
             l.ForeColor = Color.Gold;
             l.Font = new Font("Tahoma", 10F, FontStyle.Bold);
@@ -67,7 +67,6 @@
         this.txtPin.UseSystemPasswordChar = true;
         this.Controls.Add(this.txtPin);
 
-        // Button Style (Orange Color)
         this.btnLogin.Location = new System.Drawing.Point(100, 110);
         this.btnLogin.Size = new System.Drawing.Size(100, 30);
         this.btnLogin.Text = "Login";
